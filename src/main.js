@@ -90,22 +90,14 @@ document.querySelector("#app").innerHTML = `<section id="title">
 
       <fieldset>
         <legend>Smještaj i prijevoz</legend>
-        <div class="radio-group">
-          <span class="radio-label">Treba mi smještaj?</span>
-          <label class="radio-option">
-            <input type="radio" name="accommodation" value="yes" required /> Da
+        <div class="checkbox-group">
+          <label class="checkbox-option">
+            <input type="checkbox" name="accommodation" />
+            Treba mi smještaj
           </label>
-          <label class="radio-option">
-            <input type="radio" name="accommodation" value="no" required /> Ne
-          </label>
-        </div>
-        <div class="radio-group">
-          <span class="radio-label">Treba mi prijevoz iz Zagreba?</span>
-          <label class="radio-option">
-            <input type="radio" name="transport" value="yes" required /> Da
-          </label>
-          <label class="radio-option">
-            <input type="radio" name="transport" value="no" required /> Ne
+          <label class="checkbox-option">
+            <input type="checkbox" name="transport" />
+            Treba mi prijevoz iz Zagreba
           </label>
         </div>
       </fieldset>
@@ -147,7 +139,7 @@ document.querySelector("#app").innerHTML = `<section id="title">
               id="other"
               name="other"
               rows="4"
-              placeholder="Ako imate dodatne napomene, pišite ovdje..."
+              placeholder="Glazbene želje, pitanja, pozdravi..."
             ></textarea>
           </div>
         </div>
@@ -227,13 +219,13 @@ document.querySelector("#rsvp-form").addEventListener("submit", async (e) => {
       firstName: form["guest2-name"].value.trim(),
       attending: form["guest2-attending"].value,
     },
-    accommodation: form["accommodation"].value,
-    transport: form["transport"].value,
+    accommodation: form["accommodation"].checked,
+    transport: form["transport"].checked,
     drink: form["drink"].value.trim(),
     allergies: form["allergies"].value.trim(),
     other: form["other"].value.trim(),
     submittedAt: new Date().toISOString(),
   };
   await saveFormData(data);
-  alert("RSVP sent!");
+  alert("Hvala na potvrdi!");
 });
