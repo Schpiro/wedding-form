@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "type": "module",
-  "homepage": "https://schpiro.github.io/wedding-form",
+  "homepage": "https://schpiro.github.io/wedding-form/",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
@@ -16,6 +16,7 @@
     "vite": "^8.0.10"
   },
   "dependencies": {
+    "@vitejs/plugin-react": "^6.0.1",
     "firebase": "^12.13.0"
   }
 }
