@@ -179,7 +179,7 @@ document.querySelector("#app").innerHTML = `<section id="title">
         <h3>Kontakti</h3>
         <p><strong>Borna:</strong> <a href="tel:+385911537637">+385911537637</a></p>
         <p><strong>Irena:</strong> <a href="tel:+385994719889">+385994719889</a></p>
-       
+        <p><strong>Anamari</strong> (kuma): <a href="tel:+385919776749">+385919776749</a></p>
       </div>
 
       <div class="detalji-block">
