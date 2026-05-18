@@ -153,7 +153,7 @@ document.querySelector("#app").innerHTML = `<section id="title">
     <div class="detalji-content">
       <div class="detalji-block">
         <h3>Matičar </h3>
-        <p><strong>Početak:</strong> 14:30</p>
+        <p><strong>Vrijeme:</strong> 14:00 - 14:30</p>
         <p><strong>Adresa:</strong> Šetalište maršala Tita 41, Lovran</p>
         <p>
           <strong>Google Maps:</strong>
